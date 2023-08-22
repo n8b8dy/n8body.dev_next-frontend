@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    image: n8body.dev-next-frontend
+    container_name: n8body.dev-next-frontend
+    ports:
+      - "3000:3000"
+    network_mode: host

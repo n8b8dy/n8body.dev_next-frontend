@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+      network: host
+    image: n8body.dev-next-frontend
+    container_name: n8body.dev-next-frontend
+    volumes:
+      - .:/app
+      - /app/node_modules
+    network_mode: host
