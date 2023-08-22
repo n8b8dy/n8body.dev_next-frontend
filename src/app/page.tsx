@@ -1,5 +1,4 @@
 import { Fragment } from 'react'
-import Link from 'next/link'
 import clsx from 'clsx'
 import { RiGithubFill } from 'react-icons/ri'
 import { IoMail } from 'react-icons/io5'
@@ -29,7 +28,7 @@ const descriptions = [
 export const revalidate = 3600
 
 const links = [
-  { icon: <RiGithubFill title="Github"/>, href: 'https://discordapp.com/users/520239310591492114' },
+  { icon: <RiGithubFill title="Github"/>, href: 'https://github.com/n8b8dy' },
   { icon: <IoMail title="Email"/>, href: 'mailto:contact@n8body.dev' },
   { icon: <RiTelegramFill title="Telegram"/>, href: 'https://t.me/n8body' },
 ]
@@ -58,12 +57,12 @@ export default async function Home() {
       <div className="flex flex-col gap-2 items-center">
         <div className="flex gap-2 items-center">
           {links.map(({ icon, href }) => (
-            <Link key={href} href={href} className={clsx(
+            <a key={href} href={href} className={clsx(
               'text-3xl',
               'opacity-75 hover:opacity-80',
               'dark:opacity-50 dark:hover:opacity-75',
               'hover:animate-pulse',
-            )}>{icon}</Link>
+            )}>{icon}</a>
           ))}
         </div>
         <Heading1>n8body</Heading1>
