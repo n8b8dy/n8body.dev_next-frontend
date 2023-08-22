@@ -39,6 +39,7 @@ async function getData(): Promise<UserResponse & MessagesResponse> {
   return { error: null, user, messages }
 }
 
+// TODO: finish admin panel
 export default async function Admin() {
   const { user, error, messages } = await getData()
 

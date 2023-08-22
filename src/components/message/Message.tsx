@@ -30,7 +30,7 @@ export const Message: FC<MessageProps> = ({ id, username, email, text, createdAt
 
   if (deletedAt) return null
 
-  return <div className="flex gap-1 px-4 py-2 rounded-md bg-neutral-900">
+  return <div className="flex gap-1 px-4 py-2 rounded-md bg-zinc-100 dark:bg-neutral-900">
     <div className="flex flex-col flex-1">
       <div className="flex items-center gap-2">
         <span className="text-lg">{username} - {email}</span>
