@@ -15,7 +15,7 @@ export const HomeSection: FC<HomeSectionProps> = ({ heading, paragraphs }) => {
   return <Fragment>
     <Heading3>{heading}</Heading3>
     {paragraphs.map(paragraph => <StandardParagraph key={paragraph}>
-      {paragraph.replaceAll('&comma;', ',')}
+      {paragraph}
     </StandardParagraph>)}
     <HorizontalDivider/>
   </Fragment>
